@@ -38,6 +38,6 @@ public class MailServiceImpl implements MailService {
 
     public static void main(String[] args) {
         MailService mailService = new MailServiceImpl();
-        mailService.sendEmail("tranxuanhoan04@gmail.com", "Subject", "Text");
+        mailService.sendEmail("youremail", "Subject", "Text");
     }
 }
