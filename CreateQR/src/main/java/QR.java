@@ -22,10 +22,8 @@ public class QR {
                 QRCodeWriter writer = new QRCodeWriter();
                 // Ma hoa thong tin vao ma tran
                 BitMatrix bitMatrix = writer.encode(data, BarcodeFormat.QR_CODE, width, height);
-
                 BufferedImage image = toBufferedImage(bitMatrix);
                 ImageIO.write(image, "png", os);
-
                 result.append(new String(Base64.getEncoder().encode(os.toByteArray())));
             } catch (Exception e) {
                 throw new RuntimeException(e);
